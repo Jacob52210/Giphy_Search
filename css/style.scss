@@ -1,0 +1,59 @@
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: gray;
+
+	.formContainer {
+		position: fixed;
+		left: 50%;
+		top: 1rem;
+		transform: translateX(-50%);
+
+		input {
+			padding: 0.5rem;
+			margin-right: 1rem;
+			border-radius: 0px 10px 0px 10px;
+			box-shadow: 5px 5px 10px black;
+
+			&:focus {
+				border-style: none;
+			}
+		}
+
+		button {
+			padding: 0.5rem;
+			border-radius: 0px 10px 0px 10px;
+			box-shadow: 5px 5px 10px black;
+
+			&:hover {
+				font-weight: bold;
+				background-color: darkgray;
+				transition: ease 0.5s;
+			}
+		}
+	}
+
+	.resultsContainer {
+		position: relative;
+		top: 4rem;
+		margin: 0px;
+		width: fit-content;
+		display: flex;
+		flex-direction: row;
+
+		img {
+			margin: 0.25rem;
+			box-shadow: 5px 5px 10px black;
+			border-radius: 0px 20px 0px 20px;
+
+			&:hover {
+				transition: ease 0.5s;
+				height: 120px;
+			}
+		}
+	}
+}
