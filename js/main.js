@@ -11,7 +11,7 @@ searchForm.addEventListener('submit', function(e) {
 
 function search(q) {
     const apiKey = "9KemuYKuM7DozeEmiGoMHyPT9qqCBgdO"
-    const path = `http://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}`
+    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}`
 
  //---------------------Error Handling------------------------------//
    
