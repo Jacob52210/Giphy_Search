@@ -8,6 +8,9 @@ body {
 	background-color: gray;
 
 	.formContainer {
+		width: 100vw;
+		display: flex;
+		justify-content: center;
 		position: fixed;
 		left: 50%;
 		top: 1rem;
