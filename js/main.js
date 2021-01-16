@@ -2,8 +2,7 @@ const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const resultsEl_pg_13 = document.getElementById('results-pg-13');
 const resultsEl_g = document.getElementById('results-g');
-let resultsHTML = '';
-let resultsHTML_pg_13 = '';
+
 
 searchForm.addEventListener('submit', function(e) {
     e.preventDefault()
@@ -20,6 +19,8 @@ function search(q) {
        return res.json()
     }).then(function(json) {
         //console.log(json.data[0].images.fixed_width.url)
+        let resultsHTML = '';
+        let resultsHTML_pg_13 = '';
         
         json.data.forEach(function(obj) {
             //console.log(obj);
