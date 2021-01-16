@@ -17,10 +17,7 @@ body .formContainer {
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  left: 50%;
   top: 1rem;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 body .formContainer input {
