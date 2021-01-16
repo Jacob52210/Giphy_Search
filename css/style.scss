@@ -6,6 +6,13 @@ body {
 	margin: 0px;
 	padding: 0px;
 	background-color: gray;
+	text-align: center;
+
+	p {
+		font-weight: bolder;
+		margin: 0px;
+		margin-top: 2rem;
+	}
 
 	.formContainer {
 		text-align: center;
@@ -48,14 +55,17 @@ body {
 		flex-direction: row;
 		overflow-x: scroll;
 
-		img {
-			margin: 0.25rem;
-			box-shadow: -1px -1px 2px rgb(233, 233, 233), 5px 5px 10px black;
-			border-radius: 0px 20px 0px 20px;
+		.gif-container {
+			text-align: center;
 
-			&:hover {
-				transition: ease 0.5s;
-				height: 120px;
+			figcaption {
+				font-weight: bolder;
+			}
+
+			img {
+				margin: 0.25rem;
+				box-shadow: -1px -1px 2px rgb(233, 233, 233), 5px 5px 10px black;
+				border-radius: 5px 20px 5px 20px;
 			}
 		}
 	}

@@ -1,7 +1,9 @@
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
-const resultsEl = document.getElementById('results');
+const resultsEl_pg_13 = document.getElementById('results-pg-13');
+const resultsEl_g = document.getElementById('results-g');
 let resultsHTML = '';
+let resultsHTML_pg_13 = '';
 
 searchForm.addEventListener('submit', function(e) {
     e.preventDefault()
@@ -11,35 +13,49 @@ searchForm.addEventListener('submit', function(e) {
 
 function search(q) {
     const apiKey = "9KemuYKuM7DozeEmiGoMHyPT9qqCBgdO"
-    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=10`
+    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=20`
 
- //---------------------Error Handling------------------------------//
-   
-
- //---------------Fetching and Converting Data----------------------//
+ //--------------- Fetching and Converting Data ----------------------//
     fetch(path).then(function(res) {  
        return res.json()
     }).then(function(json) {
-       // console.log(json.data[0].images.fixed_width.url)
+        //console.log(json.data[0].images.fixed_width.url)
         
-        
-
         json.data.forEach(function(obj) {
             //console.log(obj);
-
-            const url =  obj.images.fixed_width.url;
+            const rating = obj.rating;
+            const imgsrc =  obj.images.fixed_width.url;
             const alt = obj.title;
+            const url = obj.source_post_url
 
-            resultsHTML += `<a href="https://www.youtube.com/results?search_query=${q}"><img src="${url}"  
-                             alt="${alt}"
-                             width="auto"
-                             height="100px"
-                             ></a>`
+            if (rating === "g"){
+                resultsEl_g.innerHTML = resultsHTML;
+                resultsHTML += `<div class="gif-container">
+                              <a href="${url}"><img src="${imgsrc}"  
+                               alt="${alt}"
+                               width="auto"
+                               height="100px"
+                             ></a>
+                             <figcaption>${rating}</figcaption>
+                             </div>`
+                //console.log(rating);
+            } if (rating === "pg-13"){
+                resultsEl_pg_13.innerHTML = resultsHTML_pg_13;
+                resultsHTML_pg_13 += `<div class="gif-container">
+                              <a href="${url}"><img src="${imgsrc}"  
+                               alt="${alt}"
+                               width="auto"
+                               height="100px"
+                             ></a>
+                             <figcaption>${rating}</figcaption>
+                             </div>`
+                console.log(rating);
+            }
+
+            
         })
-
-        resultsEl.innerHTML = resultsHTML
-    }).catch(function(err) {
-        console.log(err.message)
         
+    }).catch(function(err) {
+        console.log(err.message) 
     });
 }
