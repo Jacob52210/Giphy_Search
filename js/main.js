@@ -30,11 +30,11 @@ function search(q) {
             const url =  obj.images.fixed_width.url;
             const alt = obj.title;
 
-            resultsHTML += `<img src="${url}"  
+            resultsHTML += `<a href="https://www.youtube.com/results?search_query=${q}"><img src="${url}"  
                              alt="${alt}"
                              width="auto"
                              height="100px"
-                             >`
+                             ></a>`
         })
 
         resultsEl.innerHTML = resultsHTML

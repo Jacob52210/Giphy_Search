@@ -17,8 +17,11 @@ body .formContainer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: fixed;
-  top: 1rem;
+}
+
+body .formContainer h1 {
+  font-size: 3rem;
+  margin: 1rem 0px;
 }
 
 body .formContainer input {
@@ -45,7 +48,7 @@ body .formContainer button:hover {
 
 body .resultsContainer {
   position: relative;
-  top: 4rem;
+  top: 1rem;
   margin: 0px;
   padding: 1rem;
   width: 100vw;

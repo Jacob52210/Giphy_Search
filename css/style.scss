@@ -12,8 +12,11 @@ body {
 		width: 100vw;
 		display: flex;
 		justify-content: center;
-		position: fixed;
-		top: 1rem;
+
+		h1 {
+			font-size: 3rem;
+			margin: 1rem 0px;
+		}
 
 		input {
 			padding: 0.5rem;
@@ -37,7 +40,7 @@ body {
 
 	.resultsContainer {
 		position: relative;
-		top: 4rem;
+		top: 1rem;
 		margin: 0px;
 		padding: 1rem;
 		width: 100vw;
@@ -47,7 +50,6 @@ body {
 
 		img {
 			margin: 0.25rem;
-			//filter: drop-shadow(-5px -5px 10px black);
 			box-shadow: -1px -1px 2px rgb(233, 233, 233), 5px 5px 10px black;
 			border-radius: 0px 20px 0px 20px;
 
