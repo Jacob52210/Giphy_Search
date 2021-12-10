@@ -23,7 +23,7 @@ function search(q) {
         let resultsHTML_pg_13 = '';
         
         json.data.forEach(function(obj) {
-            //console.log(obj);
+            console.log(obj);
             const rating = obj.rating;
             const imgsrc =  obj.images.fixed_width.url;
             const alt = obj.title;
