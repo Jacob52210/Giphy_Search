@@ -16,7 +16,7 @@ body {
 
 	.formContainer {
 		text-align: center;
-		width: 100vw;
+		width: 100%;
 		display: flex;
 		justify-content: center;
 
@@ -48,8 +48,8 @@ body {
 	.resultsContainer {
 		position: relative;
 		top: 1rem;
-		margin: 0px;
-		padding: 1rem;
+		margin: 0;
+		padding-right: 2rem;
 		width: 100vw;
 		display: flex;
 		flex-direction: row;
@@ -63,7 +63,7 @@ body {
 			}
 
 			img {
-				margin: 0.25rem;
+				margin: 0.5rem;
 				box-shadow: -1px -1px 2px rgb(233, 233, 233), 5px 5px 10px black;
 				border-radius: 5px 20px 5px 20px;
 			}
